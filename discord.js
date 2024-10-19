@@ -8,6 +8,8 @@ client.once('ready', () => {
 })
 
 
+const postMessages = new Set()
+
 client.on('messageReactionAdd', async (reaction, user) => {
     try {
         
@@ -22,8 +24,9 @@ client.on('messageReactionAdd', async (reaction, user) => {
         console.log("reaction emoji:", reaction.emoji.name);
 
         
-        if (reaction.emoji.name === '⬆️' && reaction.count > 2) {
-            if (user.bot) return;
+        if (reaction.emoji.name === '⬆️' && reaction.count === 3) {
+            if (user.bot || postMessages.has(reaction.message.id)) return;
+            postMessages.add(reaction.message.id);
 
             const message = reaction.message;
 
