@@ -1,0 +1,23 @@
+{
+  "name": "hall-of-fame-discord-bot",
+  "version": "1.0.0",
+  "main": "discord.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Chris-Merced/Hall-Of-Fame-Discord-Bot.git"
+  },
+  "author": "Christopher Merced",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris-Merced/Hall-Of-Fame-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/Chris-Merced/Hall-Of-Fame-Discord-Bot#readme",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
