@@ -22,7 +22,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         console.log("reaction emoji:", reaction.emoji.name);
 
         
-        if (reaction.emoji.name === '⬆️' && reaction.count > 1) {
+        if (reaction.emoji.name === '⬆️' && reaction.count > 2) {
             if (user.bot) return;
 
             const message = reaction.message;
