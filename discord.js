@@ -27,7 +27,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         if (reaction.emoji.name === '⬆️' && reaction.count === 3) {
 
             console.log("Reaction Occured")
-            if (user.bot || postMessages.has(reaction.message.id)) {
+            if (user.bot || postMessages.has(reaction.message.id) || reaction.message.channel.name === "hall-of-fame") {
                 console.log("reaction ignored")
                 return;
             };
