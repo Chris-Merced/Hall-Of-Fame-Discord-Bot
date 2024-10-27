@@ -25,7 +25,12 @@ client.on('messageReactionAdd', async (reaction, user) => {
 
         
         if (reaction.emoji.name === '⬆️' && reaction.count === 3) {
-            if (user.bot || postMessages.has(reaction.message.id)) return;
+
+            console.log("Reaction Occured")
+            if (user.bot || postMessages.has(reaction.message.id)) {
+                console.log("reaction ignored")
+                return;
+            };
             postMessages.add(reaction.message.id);
 
             const message = reaction.message;
